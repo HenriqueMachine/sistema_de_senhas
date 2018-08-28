@@ -10,4 +10,6 @@ Flight::route('/', function(){
 Flight::route('POST /usuario/cadastrar', array('UsuariosController','cadastrar'));
 Flight::route('POST /login', array('UsuariosController','login'));
 
+Flight::route('POST /senha', array('SenhaController','gerar'));
+
 ?>

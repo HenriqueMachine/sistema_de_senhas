@@ -49,7 +49,6 @@ CREATE TABLE IF NOT EXISTS `senhas` (
   `data_chamado` datetime NOT NULL,
   `data_finalizado` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id_categoria` (`id_categoria`),
   KEY `id_usuario` (`id_usuario`),
   KEY `id_categoria_2` (`id_categoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
