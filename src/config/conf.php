@@ -1,6 +1,7 @@
 <?php
 
 Flight::set('flight.log_errors', true);
+Flight::set('flight.views.path', 'src/Views');
 
 Flight::map('db', function(){
     return ConnSparrow::getInstance();
@@ -47,7 +48,8 @@ Flight::before('start', function(&$params, &$output){
     if (!(Flight::request()->url == '/token'
      && Flight::request()->method == 'POST')
      && Flight::request()->url != '/usuario/cadastrar'
-     && Flight::request()->url != '/login'){
+     && Flight::request()->url != '/login'
+     && strpos(Flight::request()->url, 'adm') === false){
 
         $header = getallheaders();
 
